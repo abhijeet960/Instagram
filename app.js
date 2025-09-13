@@ -7,6 +7,11 @@ const cookieParser = require("cookie-parser");
 const user = require("./models/user.model");
 
 const app = express();
+const cors = require('cors');
+
+
+app.use(cors()); // Allow all origins by default
+
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
